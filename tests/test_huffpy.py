@@ -1,5 +1,4 @@
 import huffpy
-from huffpy.utilities import crlfToLf
 
 files = ["tests/sample1.txt", "tests/sample2.txt", "tests/sample3.txt"]
 
