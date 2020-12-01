@@ -95,7 +95,7 @@ class HuffmanCoder:
 
         return output
 
-    def makeBytes(self, string, tree):
+    def toBytes(self, string, tree):
         """Put a Huffman-coded string and its tree into a bytes-like object."""
         
         treeBytes = [ord(t) for t in tree]
@@ -110,7 +110,7 @@ class HuffmanCoder:
 
         return _bytes
 
-    def readBytes(self, _bytes):
+    def fromBytes(self, _bytes):
         """Parse a bytes-like object back into a Huffman-coded string and its tree."""
 
         bitsInString_bytes = [bin(x)[2:].zfill(8) for x in list(_bytes[0:4])]

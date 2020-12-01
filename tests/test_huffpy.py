@@ -10,8 +10,8 @@ def test_regularFiles():
         
         coder = huffpy.HuffmanCoder()
         string, tree = coder.encode(data)
-        _bytes = coder.makeBytes(string, tree)
-        string2, tree2 = coder.readBytes(_bytes)
+        _bytes = coder.toBytes(string, tree)
+        string2, tree2 = coder.fromBytes(_bytes)
         data2 = coder.decode(string2, tree2)
 
         assert string == string2
@@ -24,8 +24,8 @@ def test_beeMovieScript():
     
     coder = huffpy.HuffmanCoder()
     string, tree = coder.encode(data)
-    _bytes = coder.makeBytes(string, tree)
-    string2, tree2 = coder.readBytes(_bytes)
+    _bytes = coder.toBytes(string, tree)
+    string2, tree2 = coder.fromBytes(_bytes)
     data2 = coder.decode(string2, tree2)
 
     assert string == string2
